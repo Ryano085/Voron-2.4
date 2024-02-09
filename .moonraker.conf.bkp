@@ -7,6 +7,15 @@ max_upload_size = 1024
 [file_manager]
 enable_object_processing = True
 
+[update_manager KlipperScreen]
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/KlipperScreen/KlipperScreen.git
+virtualenv = ~/.KlipperScreen-env
+requirements = scripts/KlipperScreen-requirements.txt
+system_dependencies = scripts/system-dependencies.json
+managed_services = KlipperScreen
+
 [authorization]
 cors_domains = 
 	https://my.mainsail.xyz
