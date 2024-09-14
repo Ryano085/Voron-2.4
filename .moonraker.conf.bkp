@@ -7,6 +7,28 @@ max_upload_size = 1024
 [file_manager]
 enable_object_processing = True
 
+[update_manager client klipper_lcd_menu]
+type = git_repo
+channel = dev
+primary_branch = main
+path = ~/klipper_lcd_menu
+origin = https://github.com/Nighthawk3D/klipper_lcd_menu
+managed_services = klipper
+
+[update_manager client klipper_network_status]
+type = git_repo
+path = /home/pi/klipper_network_status
+origin = https://github.com/JeremyRuhland/klipper_network_status
+install_script = install.sh
+
+[update_manager klipper_auto_speed]
+type = git_repo
+path = ~/klipper_auto_speed
+origin = https://github.com/anonoei/klipper_auto_speed.git
+primary_branch = main
+install_script = install.sh
+managed_services = klipper
+
 [update_manager KlipperScreen]
 type = git_repo
 path = ~/KlipperScreen
@@ -88,4 +110,10 @@ managed_services =
 	moonraker
 origin = https://github.com/gab-3d/Gab3d-Klipper-Utilities.git
 install_script = install.sh
+
+[update_manager led_effect]
+type = git_repo
+path = ~/klipper-led_effect
+origin = https://github.com/julianschill/klipper-led_effect.git
+is_system_service = False
 
